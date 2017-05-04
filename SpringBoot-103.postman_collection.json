@@ -1,0 +1,115 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Ziyang",
+		"_postman_id": "efc6f1cd-17b6-1197-609f-9dd660bc62ef",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/topics",
+			"request": {
+				"url": "http://localhost:8080/topics",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/topics POST",
+			"request": {
+				"url": "http://localhost:8080/topics",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"javaee\",\n    \"name\": \"javaee enterprise\",\n    \"description\": \"javaee description\"\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers",
+			"request": {
+				"url": "http://localhost:8080/customers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers/oops@abc.com",
+			"request": {
+				"url": "http://localhost:8080/customers/oops@abc.com",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers copy",
+			"request": {
+				"url": "http://localhost:8080/customers/firstname/first",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cutomers",
+			"request": {
+				"url": "http://localhost:8080/customers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"oops@abc.com\",\n    \"firstName\": \"first\",\n    \"lastName\": \"last\"\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cutomers",
+			"request": {
+				"url": "http://localhost:8080/customers/oops@abc.com",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"oops@abc.com\",\n    \"firstName\": \"first\",\n    \"lastName\": \"last\"\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,24 @@
+
+Problem:
+Exceptions: Cannot determine embedded database driver class for database type NONE ...
+
+Solution:
+
+The exception was because of spring jpa. I removed spring-jpa dependency from pom.xml and it solved my problem. Thanks all for help and quick response.
+=> Mongodb is configured by spring data
+
+
+Problem:
+Email in URL cannot be parsed correctly, i.e, missing the part after dot(.), e.g, oops@abc.com, will be oops@abc.
+Then the Delete, http://localhost:8080/customers/oops@abc.com, will not work
+
+Solution:
+Use regex for @PathVariable("email") in Controller
+
+@RequestMapping("/customers/{email:.+}")
+//	@RequestMapping(value = "/customers/{email:.+}", method = RequestMethod.GET)
+public Customer getCustomerByEmail(@PathVariable("email") String email) {
+	return customerRepository.findByEmail(email);
+}
+
+
